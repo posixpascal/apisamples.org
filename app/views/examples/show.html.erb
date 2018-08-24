@@ -1,0 +1,21 @@
+<div class="uk-container">
+  <h1><%= @example.title %></h1>
+  <summary><%= @example.summary %></summary>
+  <div>
+    <ul class="uk-flex-right uk-margin-remove-bottom tabs" >
+      <li
+        <% if @preferred_format == :json %>class="uk-active"
+        <% end %>>
+        <a href="<%= provider_example_path(@provider, @example, :type => "json") %>">JSON</a>
+      </li>
+      <li
+        <% if @preferred_format == :xml %>class="uk-active"
+        <% end %>>
+        <a href="<%= provider_example_path(@provider, @example, :type => "xml") %>">XML</a>
+      </li>
+    </ul>
+  </div>
+  <pre class="uk-flex code-snippet">
+    <code class="<%= @preferred_format %>"><%= @example.pretty_format(@preferred_format) %></code>
+  </pre>
+</div>

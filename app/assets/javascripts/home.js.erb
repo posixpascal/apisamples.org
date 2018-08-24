@@ -1,0 +1,26 @@
+$(function () {
+    var $searchResults = $("#search-results");
+    var examplesTemplate = Handlebars.compile($("#example-collection-template").html());
+
+    var handleSearchResults = function(results){
+        $searchResults.html(examplesTemplate({ examples: results }));
+    }
+
+
+    var search = function () {
+        var $this = $(this);
+        var query = $this.val();
+
+        if (query.length < 3){ return; }
+
+        $.ajax({
+            url: $this.data("endpoint"),
+            method: 'GET',
+            data: {
+                q: query
+            },
+            success: handleSearchResults
+        })
+    }
+    $("[data-search-provider]").on("keydown", throttle(search, 300));
+});

@@ -1,0 +1,2 @@
+module Providers::ExamplesHelper
+end

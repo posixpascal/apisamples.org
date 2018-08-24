@@ -1,0 +1,28 @@
+pre.code-snippet {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+pre.code-snippet > code {
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.tabs {
+  align-content: flex-end;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  padding: 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.tabs li {
+  display: flex;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.tabs li.uk-active {
+  font-weight: bold;
+}

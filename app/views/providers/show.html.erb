@@ -1,0 +1,8 @@
+<div class="uk-container">
+  <h1><%= @provider.name %></h1>
+  <hr>
+
+  <% @examples.each do |example| %>
+    <%= render partial: "example", locals: { provider: @provider, example: example } %>
+  <% end %>
+</div>
