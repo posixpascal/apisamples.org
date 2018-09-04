@@ -38,6 +38,18 @@ gem "pagy"
 #
 gem "active_model_serializers"
 
+# Background Processing
+#
+gem "sidekiq"
+gem "sidekiq-cron", "~> 0.6.3"
+gem "sidekiq-status"
+gem 'rufus-scheduler', '~> 3.4.0'
+gem 'redis-rails'
+
+# Markdown parsing and importnig
+#
+gem "kramdown", require: true
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

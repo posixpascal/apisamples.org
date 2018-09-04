@@ -3,6 +3,7 @@ title: Tweet Object
 summary: A JSON object from the Twitter REST API representing a tweet
 formats: json, xml
 tags: tweet, twitter
+path: GET statuses/show/:id
 ---
 
 ```json
